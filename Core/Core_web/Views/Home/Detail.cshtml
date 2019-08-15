@@ -1,0 +1,15 @@
+﻿
+@model Student
+@{ 
+    ViewBag.Title = "Detail";
+}
+
+
+    <h2>学生信息</h2>
+    <div>ID:@Model.Id</div>
+    <div>姓名:@Model.FirstName @Model.LastName</div>
+    <div>性别:@Model.Gender</div>
+    <div>出生日期:@Model.BirthDate.ToString("yyyy-MM-dd")</div>
+
+    <a asp-action="Index">返回到Home</a>
+

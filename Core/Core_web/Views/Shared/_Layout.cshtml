@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h1>123123123123</h1>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div>
+        @RenderSection("bottom",required:false)
+    </div>
+    <div>
+        @await Component.InvokeAsync("Welcome")
+    </div>
+</body>
+</html>

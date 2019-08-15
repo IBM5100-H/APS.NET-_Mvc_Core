@@ -1,0 +1,22 @@
+﻿@model IEnumerable<StudentViewModel>
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td> @s.Name </td>
+            <td> @s.Age  </td>
+            <td>
+                <a href="/Home/Detail/@s.Id"> A明细</a>
+                @Html.ActionLink("HtmlHelper明细", "Detail", new { id = s.Id })
+                <a asp-action="Detail" asp-route-id="@s.Id">Tag明细</a>
+            </td>
+
+        </tr>
+    }
+</table>
